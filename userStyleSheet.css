@@ -1,0 +1,11 @@
+﻿.navbar {
+    display: inline-block;
+}
+#HyperLink4,#HyperLink5,#HyperLink3,#HyperLink2,#HyperLink1{
+    text-decoration:none;
+}
+
+.navbar:hover{
+   background-color:gray; 
+    
+}

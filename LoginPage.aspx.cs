@@ -21,7 +21,7 @@ public partial class LoginPage : System.Web.UI.Page
         Label2.Visible = false;
         TextBox1.Visible = false;
         TextBox2.Visible = false;
-        ImageButton1.Visible = false;
+        ImageButton3.Visible = false;
         Response.Redirect("infouser.aspx");
     }
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -30,7 +30,7 @@ public partial class LoginPage : System.Web.UI.Page
         Label2.Visible = true;
         TextBox1.Visible = true;
         TextBox2.Visible = true;
-        ImageButton1.Visible = true;
+        ImageButton3.Visible = true;
     }
     protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
     {
@@ -66,6 +66,7 @@ public partial class LoginPage : System.Web.UI.Page
         catch (Exception err)
         {
             Console.WriteLine(err);
+            Label3.Text = "Uneregistered Admin";
         }
     }
 }

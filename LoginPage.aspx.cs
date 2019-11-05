@@ -9,7 +9,9 @@ using System.Data;
 
 public partial class LoginPage : System.Web.UI.Page
 {
+   
     MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;Initial Catalog=librarydata;User Id=root;password='Sql@123Sql'");
+    
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -34,6 +36,7 @@ public partial class LoginPage : System.Web.UI.Page
     }
     protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
     {
+      
         try
         {
             con.Open();
@@ -51,12 +54,13 @@ public partial class LoginPage : System.Web.UI.Page
             String ps;
             //uname = ds.Tables[0].Rows[0]["name"].ToString();
             ps = ds.Tables[0].Rows[0]["password"].ToString();
+            
             con.Close();
 
             if (TextBox2.Text == ps)
             {
-                Session["username"] = TextBox1.Text;
-                Response.Redirect("infoadmin.aspx");
+                Session["username"] = TextBox1.Text;//for session control
+                Response.Redirect("infoadmin.aspx");//this redirects page
             }
             else
             {

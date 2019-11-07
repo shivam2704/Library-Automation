@@ -4,13 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Configuration;
 using System.Data;
 
 public partial class LoginPage : System.Web.UI.Page
 {
    
-    MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;Initial Catalog=librarydata;User Id=root;password='Sql@123Sql'");
+    
     
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -39,13 +40,18 @@ public partial class LoginPage : System.Web.UI.Page
       
         try
         {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
-            MySqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select password from admin where name='" + TextBox1.Text + "'";
-            cmd.ExecuteNonQuery();
+           
+            String str = "select password from admin where name='" + TextBox1.Text + "'";
+            SqlCommand cmd = new SqlCommand(str,con);
+           // cmd.Parameters.AddWithValue("@pass","beontime");
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = "select password from admin where name='" + TextBox1.Text + "'";
+            //cmd.ExecuteNonQuery();
+           // Response.Write("success");
 
-            MySqlDataAdapter da = new MySqlDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
 
             DataSet ds = new DataSet();

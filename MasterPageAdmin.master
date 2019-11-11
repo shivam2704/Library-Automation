@@ -18,13 +18,13 @@
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
         <div class="navbar"><asp:HyperLink ID="HyperLink1" runat="server" Height="30px" NavigateUrl="~/infoadmin.aspx">Information</asp:HyperLink></div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="navbar"><asp:HyperLink ID="HyperLink2" runat="server" Height="30px">Books</asp:HyperLink></div>
+        <div class="navbar"><asp:HyperLink ID="HyperLink2" runat="server" Height="30px" NavigateUrl="~/add books.aspx">Books</asp:HyperLink></div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="navbar"><asp:HyperLink ID="HyperLink5" runat="server" Height="30px">Card Rules</asp:HyperLink></div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="navbar"><asp:HyperLink ID="HyperLink6" runat="server" Height="30px">Student</asp:HyperLink></div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="navbar"><asp:HyperLink ID="HyperLink7" runat="server" Height="30px">Issue Books</asp:HyperLink></div>
+        <div class="navbar"><asp:HyperLink ID="HyperLink7" runat="server" Height="30px" NavigateUrl="~/bookissue.aspx">Issue Books</asp:HyperLink></div>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="navbar"><asp:HyperLink ID="HyperLink8" runat="server" Height="30px">Return Books</asp:HyperLink></div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="Logout" OnClick="Button1_Click1" />

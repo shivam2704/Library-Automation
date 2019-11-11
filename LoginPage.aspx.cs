@@ -42,13 +42,14 @@ public partial class LoginPage : System.Web.UI.Page
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
-           
+            
+            
             String str = "select password from admin where name='" + TextBox1.Text + "'";
             SqlCommand cmd = new SqlCommand(str,con);
            // cmd.Parameters.AddWithValue("@pass","beontime");
             //cmd.CommandType = CommandType.Text;
             //cmd.CommandText = "select password from admin where name='" + TextBox1.Text + "'";
-            //cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
            // Response.Write("success");
 
             SqlDataAdapter da = new SqlDataAdapter();
@@ -57,26 +58,34 @@ public partial class LoginPage : System.Web.UI.Page
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            String ps;
-            //uname = ds.Tables[0].Rows[0]["name"].ToString();
-            ps = ds.Tables[0].Rows[0]["password"].ToString();
-            
-            con.Close();
-
-            if (TextBox2.Text == ps)
+            if (ds.Tables[0].Rows.Count > 0)
             {
-                Session["username"] = TextBox1.Text;//for session control
-                Response.Redirect("infoadmin.aspx");//this redirects page
+                String ps;
+                //uname = ds.Tables[0].Rows[0]["name"].ToString();
+                ps = ds.Tables[0].Rows[0]["password"].ToString();
+
+
+
+                if (TextBox2.Text == ps)
+                {
+
+                    Session["username"] = TextBox1.Text;//for session control
+                    Response.Redirect("infoadmin.aspx");//this redirects page
+                }
+                else
+                {
+                    Label3.Text = "Wrong password";
+                }
             }
             else
             {
-                Label3.Text = "Wrong password";
+                Label3.Text = "Unregistered Admin";
             }
+            con.Close();
         }
         catch (Exception err)
         {
             Console.WriteLine(err);
-            Label3.Text = "Uneregistered Admin";
         }
     }
 }

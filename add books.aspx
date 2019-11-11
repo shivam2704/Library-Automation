@@ -11,12 +11,11 @@
 
 
 <%--<form id="form1" action="#">--%>
-        <table>
-            <tr>
-                <th colspan="3"><strong>Add New Books >>>></strong></th>
-            </tr>
-            <tr>
-                <td> Book ID </td>
+            
+               <h1 style="text-align:center; color:black">Add New Books </h1>
+        <table >
+         <tr>
+         <td> Book ID </td>
                 <td> : </td>
                 <td>
                     <asp:TextBox ID="txtbook_id" runat="server" Width="156px" CssClass="txt"></asp:TextBox>

@@ -33,9 +33,13 @@ public partial class add_books : System.Web.UI.Page
             lbladd_book.Visible = true;
         }
         con.Close();
+
+        Response.Redirect(Request.Url.AbsoluteUri);
+   
     }
     protected void btn_back_Click(object sender, EventArgs e)
     {
+      }
 
-    }
+
 }

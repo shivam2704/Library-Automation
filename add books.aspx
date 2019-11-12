@@ -13,21 +13,13 @@
 <%--<form id="form1" action="#">--%>
             
                <h1 style="text-align:center; color:black">Add New Books </h1>
-        <table >
-         <tr>
-         <td> Accession No </td>
-                <td> : </td>
-                <td>
-                    <asp:TextBox ID="txtbook_id" runat="server" Width="156px" CssClass="txt"></asp:TextBox>
-                </td>
-            </tr>
+       
+     <table >
             <tr>
                 <td> Book Name </td>
-                <td> : </td>
-                <td>
-                    <asp:TextBox ID="txtbook_name" runat="server" Width="156px" CssClass="txt"></asp:TextBox>
-                </td>
-            </tr>
+                 <td> : </td>
+                <td>    <asp:TextBox ID="txtbook_name" runat="server" Width="156px" CssClass="txt"></asp:TextBox></td>
+            
             <tr>
                 <td>Book Author </td>
                 <td> : </td>
@@ -46,7 +38,8 @@
                 <td> Category </td>
                 <td> : </td>
                 <td>
-                    <asp:DropDownList ID="ddlbook_type" runat="server" Width="156px">
+                    <asp:DropDownList ID="ddlbook_type" runat="server" Width="156px" >
+                        <asp:ListItem>Choose One</asp:ListItem>
                         <asp:ListItem>Computer Science</asp:ListItem>
                         <asp:ListItem>Literarure</asp:ListItem>
                         <asp:ListItem>History</asp:ListItem>
@@ -88,8 +81,8 @@
         <div>
         <table>
             <tr>
-                <td align="right">
-                    <asp:Button ID="btn_back" runat="server" CssClass="btn" Text="Go Back" OnClick="btn_back_Click" />
+                <td >
+                    <asp:Button ID="btn_back" runat="server" CssClass="btn" Text="Go Back" PostBackUrl="~/Default.aspx"  />
                 </td>
             </tr>
         </table>

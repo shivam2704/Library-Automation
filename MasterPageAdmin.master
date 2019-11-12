@@ -29,12 +29,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="Logout" OnClick="Button1_Click1" />
         <br />
     </div>
-        <div style="height: 239px">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <h4>Thanks</h4>
                 
             </asp:ContentPlaceHolder>
-            <footer><h4>Thanks</h4></footer>
-        </div>
+            
     </form>
 </body>
 </html>

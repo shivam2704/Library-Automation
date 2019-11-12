@@ -1,0 +1,38 @@
+﻿body {
+    background-image:url("formbackgroundimages.jpg");
+    background-size:cover;
+    background-position:center;
+}
+h1 {
+    color:	#ff8000;
+}
+#form2{
+    border:solid orange 2px;
+     background-image:url("regis.jpg");
+      background-size:cover;
+    background-position:center;
+    margin-left:25%;
+    margin-right:25%;
+    border-radius:20px;
+}
+#Button6,#Button1,#Button2,#Button4,#Button5,#Button3 {
+    border-color:#f86c08;
+    background-color:#f2a20f;
+    border-radius:50px;
+    color:red;
+}
+#TextBox2, #TextBox3, #TextBox4, #TextBox5, #TextBox6,#TextBox7,#TextBox1 {
+    border-radius:50px;
+    border-color:#f86c08;
+}
+#submit{
+    border-color:#6fd819;
+    background-color:#07f325;
+    border-radius:50px;
+}
+#label4{
+    color:#fe0909;
+}
+#iD {
+    color:red;
+}

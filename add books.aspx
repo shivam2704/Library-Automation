@@ -15,7 +15,7 @@
                <h1 style="text-align:center; color:black">Add New Books </h1>
         <table >
          <tr>
-         <td> Book ID </td>
+         <td> Accession No </td>
                 <td> : </td>
                 <td>
                     <asp:TextBox ID="txtbook_id" runat="server" Width="156px" CssClass="txt"></asp:TextBox>
@@ -47,10 +47,29 @@
                 <td> : </td>
                 <td>
                     <asp:DropDownList ID="ddlbook_type" runat="server" Width="156px">
-                        <asp:ListItem>Education</asp:ListItem>
-                        <asp:ListItem>Art and Architecture</asp:ListItem>
+                        <asp:ListItem>Computer Science</asp:ListItem>
+                        <asp:ListItem>Literarure</asp:ListItem>
                         <asp:ListItem>History</asp:ListItem>
+                        <asp:ListItem>English</asp:ListItem>
                     </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Copies
+                </td>
+                <td> : </td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="156px" CssClass="txt"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Language
+                </td>
+                <td> : </td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server" Width="156px" CssClass="txt"></asp:TextBox>
                 </td>
             </tr>
             <tr>

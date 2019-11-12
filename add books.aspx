@@ -43,7 +43,7 @@
                 </td>
             </tr>
             <tr>
-                <td> Book Type </td>
+                <td> Category </td>
                 <td> : </td>
                 <td>
                     <asp:DropDownList ID="ddlbook_type" runat="server" Width="156px">
